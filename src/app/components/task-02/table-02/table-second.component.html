@@ -1,0 +1,25 @@
+<div class="content">
+  <div class="but">
+    <button class="button" (click)="create()">create</button>
+  </div>
+  <div class="table-wrapper">
+    <div class="table-header">Действующие маршруты IPv4</div>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            <div>Адрес назначения  <img src="../assets/icons8.png" (click)="sorting(optionEnum.address)"></div></th>
+          <th><div>Шлюз  <img src="../assets/icons8.png" (click)="sorting(optionEnum.gateway)"></div></th>
+          <th><div>Интерфейс  <img src="../assets/icons8.png" (click)="sorting(optionEnum.interface)"></div></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let elem of tableData" (click)="onView(elem)">
+            <td >{{ elem.address }}</td>
+            <td>{{ elem.gateway }}</td>
+            <td>{{ elem.interface }}</td>
+          </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

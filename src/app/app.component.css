@@ -1,0 +1,17 @@
+.link {
+  text-decoration: none;
+  color: color(blue);
+  margin-right: 20px;
+}
+
+:host, main {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+::ng-deep app-table {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}

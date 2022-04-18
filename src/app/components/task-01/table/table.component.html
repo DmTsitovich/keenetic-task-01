@@ -1,0 +1,12 @@
+<div class="content"> 
+  <button class="button" (click)="sorting()"> sorting </button>
+  <div class="table-wrapper">
+    <table>
+        <tr *ngFor="let elem of list">
+          <td>{{ elem.ip }}</td>
+          <td>{{ elem.name }}</td>
+        </tr>
+    </table>
+  </div>
+   
+</div>

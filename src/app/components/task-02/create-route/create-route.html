@@ -1,0 +1,44 @@
+<div class="popup-fade">
+    <div class="popup">
+       <div class="header">
+         Параметры статического маршрута
+         <button class="popup-close" (click)="onNoClick()"> x </button>  
+       </div>
+       <div class="option">
+         <div class="items">
+            <div>Адрес сети назначения</div>
+            <frm-input
+            [required]="true"
+            (keypress)="filterSymbols($event)"
+            [control]="getFormControl('address')"
+            ></frm-input>
+         </div>
+         <div class="items">
+            <div>Маска подсети</div>
+            <frm-input
+            [required]="true"
+            (keypress)="filterSymbols($event)"
+            [control]="getFormControl('mask')"
+            ></frm-input>            
+         </div>
+         <div class="items">
+             <div>Адрес шлюза</div>
+            <frm-input
+            [required]="true"
+            (keypress)="filterSymbols($event)"
+            [control]="getFormControl('gateway')"
+            >
+            </frm-input>          
+         </div>
+         <div class="items">
+            <div>Интерфейс</div>
+            <frm-input
+            [control]="getFormControl('interface')"
+            ></frm-input>     
+         </div>
+       </div>
+       <div class="actions-button">
+          <button class="btn-primary" type="submit" style="color: white;" [disabled]="!isFormValid" (click)="save()">Добавить маршрут</button>
+       </div>
+    </div>
+</div>

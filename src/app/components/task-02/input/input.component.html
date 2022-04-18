@@ -1,0 +1,21 @@
+<div class="ui-kit-form-group__input">
+    <mat-form-field
+      appearance="fill"
+      [floatLabel]="floatLabel">
+      <mat-label *ngIf="!hasSearchIcon">{{label}}</mat-label>
+      <input matInput
+             [type]="type"
+             [formControl]="control"
+             [placeholder]="placeholder"
+             [maxlength]="maxLength"
+             [class.hasSearchIcon]="hasSearchIcon"
+             [class.labelTop]="label && !hasSearchIcon"
+             [class.clearable]="clearable"
+             [required]="required"
+             [mask]="mask"
+             [prefix]="prefix"
+             [specialCharacters]="specialCharacters"
+             [dropSpecialCharacters]="dropSpecialCharacters"
+             [validation]="validation">
+    </mat-form-field>
+</div>

@@ -1,0 +1,52 @@
+<div class="modal-fade">
+    <div class="modal">
+       <div class="header">
+         Параметры статического маршрута
+         <button class="modal-close" (click)="onNoClick()"> x </button>  
+       </div>
+       <div class="option">
+         <div class="items">
+            <div>Адрес сети назначения</div>
+            <frm-input
+            placeholder="000:000:000:000"
+            [control]="getFormControl('address')"
+            >
+
+            </frm-input>
+            
+         </div>
+         <div class="items">
+            <div>Маска подсети</div>
+            <frm-input
+            placeholder="000:000:000:000"
+            [control]="getFormControl('mask')"
+            >
+
+            </frm-input>            
+         </div>
+         <div class="items">
+             <div>Адрес шлюза</div>
+            <frm-input
+            placeholder="000:000:000:000"
+            [control]="getFormControl('gateway')"
+            >
+            </frm-input>          
+         </div>
+         <div class="items">
+            <div>Интерфейс</div>
+            <frm-input
+            placeholder="000:000:000:000"
+            [control]="getFormControl('interface')"
+            >
+            </frm-input>     
+         </div>
+         <div class="items">
+            <button class="butt" style="background-color: white; border-color: aqua;" (click)="deleteItem()">Удалить маршрут</button>
+         </div>
+       </div>
+       <div class="actions-button">
+          <button class="butt" style="color: white;" (click)="save()"> Сохранить</button>
+          <button class="butt" style="background-color: white; " (click)="onNoClick()" > Отменить</button>
+       </div>
+    </div>
+</div>
